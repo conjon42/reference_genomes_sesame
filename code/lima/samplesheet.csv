@@ -1,0 +1,2 @@
+sample,hifireads,ref_fasta,ref_gff
+pi426950,/ibex/project/c2141/sesame/reference_genome_assembly/intermediate/reads/pi426950_other.fq.gz,/ibex/project/c2141/sesame/rna_seq/data/external/baizhima_genome.fasta,/ibex/project/c2141/sesame/rna_seq/data/external/baizhima_annotation.gff

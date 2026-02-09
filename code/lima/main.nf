@@ -1,15 +1,15 @@
 nextflow.enable.dsl=2
 
 // Import the module (adjust path as needed)
-include { LIMA } from '../modules/nf-core/lima/main'
+include { LIMA } from './modules/nf-core/lima/main'
 
 workflow {
 
     // 1. Define the primers file (static input)
-    primers_ch = file("path/to/primers.fasta")
+    primers_ch = file("../../data/20260114_bcl_hifi_release/2_A01/common/barcodes.fasta")
 
     // 2. Create the Channel from the samplesheet
-    input_ch = Channel
+    input_ch = channel
         .fromPath("samplesheet.csv")
         .splitCsv(header: true) // Parses the header row keys
         .map { row ->
@@ -18,10 +18,8 @@ workflow {
             // We pack 'id' (required) plus all your optional columns and the BAI path here.
             def meta = [
                 id: row.sample,           // Required by most nf-core modules
-                bai: row.bai,             // Preserved for later modules
-                center: row.sequencing_center, // Optional col 1
-                date: row.run_date        // Optional col 2
-            ]
+                pbi: row.pbi,             // Preserved for later modules
+                
 
             // CONSTRUCT THE TUPLE
             // [ meta_map, bam_file ] matches: tuple val(meta), path(ccs)
@@ -33,6 +31,6 @@ workflow {
     
     // 4. Example of accessing the preserved data downstream
     LIMA.out.bam.view { meta, bam -> 
-        "Finished processing ${meta.id}. The original BAI was ${meta.bai}"
+        "Finished processing ${meta.id}. The original pbi was ${meta.pbi}"
     }
 }
