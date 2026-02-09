@@ -12,13 +12,13 @@ workflow {
     input_ch = channel
         .fromPath("samplesheet.csv")
         .splitCsv(header: true) // Parses the header row keys
+        .view { row -> "Read sample ${row.sample} with BAM ${row.bam}" } // Optional: view the parsed data
         .map { row ->
             
             // CONSTRUCT THE META MAP
             // We pack 'id' (required) plus all your optional columns and the BAI path here.
             def meta = [
                 id: row.sample,           // Required by most nf-core modules
-                pbi: row.pbi,             // Preserved for later modules
             ]
 
             // CONSTRUCT THE TUPLE
@@ -31,6 +31,6 @@ workflow {
     
     // 4. Example of accessing the preserved data downstream
     LIMA.out.bam.view { meta, bam -> 
-        "Finished processing ${meta.id}. The original pbi was ${meta.pbi}"
+        "Finished processing ${meta.id}. Output BAM: ${bam}"
     }
 }
