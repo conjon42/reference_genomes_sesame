@@ -12,5 +12,5 @@
 /code/*/work
 /code/*/.nextflow.*
 /code/*/.nextflow/
-
+*.tsv
 
