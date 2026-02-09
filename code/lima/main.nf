@@ -19,6 +19,7 @@ workflow {
             // We pack 'id' (required) plus all your optional columns and the BAI path here.
             def meta = [
                 id: row.sample,           // Required by most nf-core modules
+                bam: row.bam
             ]
 
             // CONSTRUCT THE TUPLE
