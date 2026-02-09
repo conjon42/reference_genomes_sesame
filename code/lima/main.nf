@@ -19,7 +19,7 @@ workflow {
             def meta = [
                 id: row.sample,           // Required by most nf-core modules
                 pbi: row.pbi,             // Preserved for later modules
-                
+            ]
 
             // CONSTRUCT THE TUPLE
             // [ meta_map, bam_file ] matches: tuple val(meta), path(ccs)
