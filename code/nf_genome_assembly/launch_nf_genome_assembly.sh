@@ -16,7 +16,7 @@ module load nextflow
 nextflow run nf-core/genomeassembler \
     -r dev \
     -profile kaust \
-    -c amd_rome.config \
+    -c hifiasm_amd_rome.config \
     --input ./samplesheet.csv \
     --outdir ../../results/asssembly \
     --use_ref \
