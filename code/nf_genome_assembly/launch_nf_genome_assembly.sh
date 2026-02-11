@@ -22,4 +22,5 @@ nextflow run nf-core/genomeassembler \
     --hifi \
     --assembler hifiasm \
     --hifiasm_args "-l0 --hg-size 320m --primary" \
-    --scaffold_ragtag
+    --scaffold_ragtag \
+    --resume
