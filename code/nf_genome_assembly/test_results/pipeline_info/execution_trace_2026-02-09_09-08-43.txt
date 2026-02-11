@@ -1,0 +1,2 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	a5/cb3e15	45308131	NFCORE_GENOMEASSEMBLER:GENOMEASSEMBLER:ASSEMBLE:HIFIASM (Col-0_2MB)	ABORTED	-	2026-02-09 09:09:10.519	-	-	-	-	-	-	-

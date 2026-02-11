@@ -1,0 +1,2 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	95/d50aaa	45304043	NFCORE_GENOMEASSEMBLER:GENOMEASSEMBLER:ONT:PREPARE_ONT:RUN_NANOQ:NANOQ (Col-0_2MB)	COMPLETED	0	2026-02-09 08:35:40.483	4.5s	1s	100.6%	5.6 MB	11.4 MB	24.8 MB	1.5 KB

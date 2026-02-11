@@ -1,0 +1,228 @@
+<!--
+  ~ Copyright 2013-2024, Seqera Labs
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<pre class="mermaid" style="text-align: center;">
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#B6ECE2',
+      'primaryTextColor': '#160F26',
+      'primaryBorderColor': '#065647',
+      'lineColor': '#545555',
+      'clusterBkg': '#BABCBD22',
+      'clusterBorder': '#DDDEDE',
+      'fontFamily': 'arial'
+    }
+  }
+}%%
+flowchart TB
+    subgraph " "
+    v4["Channel.fromPath"]
+    v26["Channel.of"]
+    v40["Channel.of"]
+    v88[" "]
+    v89[" "]
+    v90[" "]
+    v134["ref_db"]
+    v167["Channel.of"]
+    v186[" "]
+    v189["Channel.fromPath"]
+    v191["Channel.fromPath"]
+    v193["Channel.fromPath"]
+    v199[" "]
+    v209["Channel.of"]
+    end
+    subgraph " "
+    v8["references"]
+    v10[" "]
+    v29["nanoq_files"]
+    v31["genomescope_files"]
+    v36[" "]
+    v38["genome_size"]
+    v43[" "]
+    v53["med_len"]
+    v86["ch_refs"]
+    v92[" "]
+    v93[" "]
+    v94[" "]
+    v95[" "]
+    v96[" "]
+    v97[" "]
+    v98[" "]
+    v99[" "]
+    v100[" "]
+    v107["longreads"]
+    v109["in_reads"]
+    v136[" "]
+    v137[" "]
+    v138["lifted_annotations"]
+    v170[" "]
+    v185[" "]
+    v195[" "]
+    v196[" "]
+    v197[" "]
+    v198[" "]
+    v213[" "]
+    v215["_report"]
+    end
+    subgraph "NFCORE_GENOMEASSEMBLER [NFCORE_GENOMEASSEMBLER]"
+    subgraph "NFCORE_GENOMEASSEMBLER:GENOMEASSEMBLER [GENOMEASSEMBLER]"
+    subgraph "NFCORE_GENOMEASSEMBLER:GENOMEASSEMBLER:ONT [ONT]"
+    subgraph "NFCORE_GENOMEASSEMBLER:GENOMEASSEMBLER:ONT:PREPARE_ONT [PREPARE_ONT]"
+    subgraph "NFCORE_GENOMEASSEMBLER:GENOMEASSEMBLER:ONT:PREPARE_ONT:RUN_NANOQ [RUN_NANOQ]"
+    v52(["NANOQ"])
+    end
+    subgraph "NFCORE_GENOMEASSEMBLER:GENOMEASSEMBLER:ONT:PREPARE_ONT:COLLECT [COLLECT]"
+    v46(( ))
+    end
+    v54(( ))
+    end
+    v41(( ))
+    v57(( ))
+    end
+    subgraph "NFCORE_GENOMEASSEMBLER:GENOMEASSEMBLER:ASSEMBLE [ASSEMBLE]"
+    v91(["HIFIASM"])
+    v101(["GFA_2_FA_HIFI"])
+    subgraph "NFCORE_GENOMEASSEMBLER:GENOMEASSEMBLER:ASSEMBLE:RUN_LIFTOFF [RUN_LIFTOFF]"
+    v135(["LIFTOFF"])
+    v132(( ))
+    v139(( ))
+    end
+    v85(( ))
+    v87(( ))
+    v102(( ))
+    v108(( ))
+    subgraph "NFCORE_GENOMEASSEMBLER:GENOMEASSEMBLER:ASSEMBLE:QC [QC]"
+    v122(( ))
+    end
+    end
+    v194(["REPORT"])
+    v27(( ))
+    v37(( ))
+    v58(( ))
+    v60(( ))
+    v63(( ))
+    subgraph "NFCORE_GENOMEASSEMBLER:GENOMEASSEMBLER:HIFI [HIFI]"
+    subgraph "NFCORE_GENOMEASSEMBLER:GENOMEASSEMBLER:HIFI:PREPARE_HIFI [PREPARE_HIFI]"
+    v66(( ))
+    end
+    end
+    subgraph "NFCORE_GENOMEASSEMBLER:GENOMEASSEMBLER:SCAFFOLD [SCAFFOLD]"
+    v157(( ))
+    v159(( ))
+    v161(( ))
+    end
+    v187(( ))
+    v190(( ))
+    v192(( ))
+    v214(( ))
+    end
+    end
+    subgraph "PIPELINE_INITIALISATION [PIPELINE_INITIALISATION]"
+    v5(( ))
+    end
+    v4 --> v5
+    v5 --> v8
+    v5 --> v10
+    v26 --> v27
+    v27 --> v29
+    v27 --> v31
+    v27 --> v36
+    v37 --> v38
+    v40 --> v41
+    v41 --> v43
+    v46 --> v52
+    v52 --> v53
+    v52 --> v54
+    v52 --> v58
+    v85 --> v86
+    v88 --> v91
+    v89 --> v91
+    v90 --> v91
+    v87 --> v91
+    v91 --> v100
+    v91 --> v99
+    v91 --> v101
+    v91 --> v98
+    v91 --> v97
+    v91 --> v96
+    v91 --> v95
+    v91 --> v94
+    v91 --> v93
+    v91 --> v92
+    v91 --> v102
+    v101 --> v102
+    v101 --> v132
+    v87 --> v107
+    v108 --> v109
+    v134 --> v135
+    v132 --> v135
+    v135 --> v138
+    v135 --> v137
+    v135 --> v136
+    v135 --> v139
+    v167 --> v63
+    v63 --> v170
+    v27 --> v185
+    v186 --> v187
+    v189 --> v190
+    v191 --> v192
+    v193 --> v194
+    v27 --> v194
+    v58 --> v194
+    v60 --> v194
+    v187 --> v194
+    v190 --> v194
+    v192 --> v194
+    v194 --> v198
+    v194 --> v197
+    v194 --> v196
+    v194 --> v195
+    v194 --> v214
+    v199 --> v63
+    v209 --> v63
+    v63 --> v213
+    v214 --> v215
+    v5 --> v37
+    v5 --> v46
+    v5 --> v66
+    v5 --> v85
+    v5 --> v132
+    v157 --> v27
+    v159 --> v27
+    v161 --> v27
+    v41 --> v60
+    v46 --> v87
+    v46 --> v108
+    v54 --> v57
+    v57 --> v63
+    v102 --> v63
+    v66 --> v87
+    v122 --> v102
+    v139 --> v102
+
+</pre>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, maxTextSize: Number.MAX_SAFE_INTEGER, maxEdges: Number.MAX_SAFE_INTEGER });
+</script>
+</body>
+</html>
