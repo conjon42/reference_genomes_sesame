@@ -1,0 +1,15 @@
+#!/bin/bash
+# Wrapper script to force NUMA interleaving on AMD Rome
+
+# Check if numactl is available (it might not be in the container!)
+if command -v numactl &> /dev/null; then
+    # Run the real hifiasm with interleaving
+    # We assume the real binary is in the path (e.g., /usr/local/bin/hifiasm)
+    # NOTE: You might need to specify the absolute path to the container's hifiasm 
+    # if this script essentially hides it.
+    numactl --interleave=all /usr/local/bin/hifiasm "$@"
+else
+    # Fallback if numactl is missing
+    echo "WARNING: numactl not found, running standard hifiasm" >&2
+    /usr/local/bin/hifiasm "$@"
+fi
