@@ -11,5 +11,9 @@
 
 module load gfatools
 mkdir -p ../intermediate/2OW4BC1lvLRFRF_scaffold/giza
-gfatools gfa2fa ../results/2OW4BC1lvLRFRF_scaffold/giza/assembly/hifiasm/giza.p_ctg.gfa > ../intermediate/2OW4BC1lvLRFRF_scaffold/giza/giza.p_ctg.fasta
-gfatools gfa2fa ../results/2OW4BC1lvLRFRF_scaffold/giza/assembly/hifiasm/giza.a_ctg.gfa > ../intermediate/2OW4BC1lvLRFRF_scaffold/giza/giza.a_ctg.fasta
+cd ../intermediate/2OW4BC1lvLRFRF_scaffold/giza
+gfatools gfa2fa ../results/2OW4BC1lvLRFRF_scaffold/giza/assembly/hifiasm/giza.p_ctg.gfa > ./giza.p_ctg.fasta
+gfatools gfa2fa ../results/2OW4BC1lvLRFRF_scaffold/giza/assembly/hifiasm/giza.a_ctg.gfa > ./giza.a_ctg.fasta
+
+cat giza.p_ctg.fasta giza.a_ctg.fasta > giza.combined.fasta
+
