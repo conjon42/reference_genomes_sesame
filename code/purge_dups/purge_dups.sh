@@ -9,6 +9,8 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=conner.johnson@kaust.edu.sa
 
+
+source /ibex/user/johnsoc/miniforge/etc/profile.d/conda.sh
 conda activate purge_dups
 
 pb_list=$(ls /ibex/project/c2141/sesame/reference_genome_assembly/intermediate/reads/giza_other.fq.gz)
