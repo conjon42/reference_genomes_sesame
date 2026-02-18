@@ -1,0 +1,2 @@
+mkdir: cannot create directory ‘../../results/2OW4BC1lvLRFRF_scaffold/giza/QC/compleasm’: File exists
+slurmstepd: error: *** JOB 45509021 ON cn509-26-r CANCELLED AT 2026-02-17T13:09:47 ***

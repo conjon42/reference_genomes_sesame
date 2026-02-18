@@ -1,0 +1,12 @@
+usage: compleasm run [-h] -a ASSEMBLY_PATH -o OUTPUT_DIR [-t THREADS]
+                     [-l LINEAGE] [-L LIBRARY_PATH] [--odb ODB]
+                     [--specified_contigs SPECIFIED_CONTIGS [SPECIFIED_CONTIGS ...]]
+                     [--outs OUTS]
+                     [--miniprot_execute_path MINIPROT_EXECUTE_PATH]
+                     [--hmmsearch_execute_path HMMSEARCH_EXECUTE_PATH]
+                     [--autolineage] [--retrocopy]
+                     [--sepp_execute_path SEPP_EXECUTE_PATH]
+                     [--min_diff MIN_DIFF] [--min_identity MIN_IDENTITY]
+                     [--min_length_percent MIN_LENGTH_PERCENT]
+                     [--min_complete MIN_COMPLETE] [--min_rise MIN_RISE]
+compleasm run: error: the following arguments are required: -o/--output_dir

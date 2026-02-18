@@ -1,0 +1,3 @@
+usage: compleasm [-h] [-v] {download,list,protein,miniprot,analyze,run} ...
+compleasm: error: unrecognized arguments: odb12
+/var/spool/slurm/job45510529/slurm_script: line 26: odb: command not found

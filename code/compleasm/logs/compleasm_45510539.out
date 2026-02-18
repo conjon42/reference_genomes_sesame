@@ -1,0 +1,27 @@
+Searching for miniprot in the path where compleasm.py is located
+Searching for miniprot in the current execution path
+Searching for miniprot in $PATH
+Searching for hmmsearch in the path where compleasm.py is located
+Searching for hmmsearch in the current execution path
+Searching for hmmsearch in $PATH
+miniprot execute command:
+ /ibex/user/johnsoc/conda-environments/compleasm/bin/miniprot
+Success download from https://busco-data.ezlab.org/v5/data/lineages/eukaryota_odb12.2025-07-01.tar.gz
+Lineage file extraction path: /ibex/user/johnsoc/busco_dbs/eukaryota_odb12
+Success download from https://busco-data.ezlab.org/v5/data/lineages/viridiplantae_odb12.2025-07-01.tar.gz
+Lineage file extraction path: /ibex/user/johnsoc/busco_dbs/viridiplantae_odb12
+lineage: viridiplantae_odb12
+hmmsearch execute command:
+ /ibex/user/johnsoc/conda-environments/compleasm/bin/hmmsearch
+
+S:95.99%, 789
+D:4.01%, 33
+F:0.00%, 0
+I:0.00%, 0
+M:0.00%, 0
+N:822
+
+## Download lineage: 17.77(s)
+## Run miniprot: 302.10(s)
+## Analyze miniprot: 532.66(s)
+## Total runtime: 852.52(s)

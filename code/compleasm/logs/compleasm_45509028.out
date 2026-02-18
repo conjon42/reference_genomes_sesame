@@ -1,0 +1,25 @@
+Searching for miniprot in the path where compleasm.py is located
+Searching for miniprot in the current execution path
+Searching for miniprot in $PATH
+Searching for hmmsearch in the path where compleasm.py is located
+Searching for hmmsearch in the current execution path
+Searching for hmmsearch in $PATH
+miniprot execute command:
+ /ibex/user/johnsoc/conda-environments/compleasm/bin/miniprot
+lineage: viridiplantae_odb10
+hmmsearch execute command:
+ /ibex/user/johnsoc/conda-environments/compleasm/bin/hmmsearch
+Warning: no reliable mappings found. All candidates do not pass the cutoff of BUSCO gene.
+Warning: No reliable hits found! Check the lineage file: viridiplantae_odb10, alignment file: ../../results/2OW4BC1lvLRFRF_scaffold/giza/QC/compleasm/viridiplantae_odb10/miniprot_output.gff, hmmsearch output folder: ../../results/2OW4BC1lvLRFRF_scaffold/giza/QC/compleasm/viridiplantae_odb10/hmmer_output.
+
+S:0.00%, 0
+D:0.00%, 0
+F:0.00%, 0
+I:0.00%, 0
+M:100.00%, 425
+N:425
+
+## Download lineage: 0.00(s)
+## Run miniprot: 0.00(s)
+## Analyze miniprot: 17.31(s)
+## Total runtime: 17.31(s)

@@ -1,0 +1,23 @@
+mkdir: cannot create directory ‘../../results/2OW4BC1lvLRFRF_scaffold/giza/QC/compleasm’: File exists
+[M::mp_ntseq_read@0.000*6.96] read 0 bases in 0 contigs
+[M::mp_idx_build@0.000*6.68] 0 blocks
+[M::mp_idx_build@0.002*2.36] collected syncmers
+[M::mp_idx_build@0.052*1.04] 0 kmer-block pairs
+[M::mp_mapopt_set_max_intron] set max intron size to 10000
+[M::mp_idx_print_stat] 0 distinct k-mers; mean occ of infrequent k-mers: -nan; 0 frequent k-mers accounting for 0 occurrences
+[M::worker_pipeline::0.089*2.44] mapped 3854 sequences
+[M::worker_pipeline::0.107*3.50] mapped 4374 sequences
+[M::worker_pipeline::0.117*4.37] mapped 3992 sequences
+[M::worker_pipeline::0.131*4.98] mapped 4842 sequences
+[M::worker_pipeline::0.145*5.59] mapped 5958 sequences
+[M::worker_pipeline::0.158*6.05] mapped 5469 sequences
+[M::worker_pipeline::0.173*6.45] mapped 6869 sequences
+[M::worker_pipeline::0.183*6.71] mapped 2981 sequences
+[M::worker_pipeline::0.196*6.89] mapped 1893 sequences
+[M::worker_pipeline::0.209*7.05] mapped 2866 sequences
+[M::worker_pipeline::0.221*7.20] mapped 2468 sequences
+[M::worker_pipeline::0.235*7.42] mapped 3367 sequences
+[M::worker_pipeline::0.235*7.41] mapped 750 sequences
+[M::main] Version: 0.18-r281
+[M::main] CMD: /ibex/user/johnsoc/conda-environments/compleasm/bin/miniprot --trans -u -I --outs=0.95 -t 32 --gff ../../intermediate/2OW4BC1lvLRFRF_scaffold/giza/giza.p_ctg.fasta /ibex/user/johnsoc/busco_dbs/viridiplantae_odb10/refseq_db.faa.gz
+[M::main] Real time: 0.241 sec; CPU: 1.747 sec; Peak RSS: 0.133 GB
