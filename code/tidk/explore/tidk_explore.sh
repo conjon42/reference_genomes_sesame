@@ -14,11 +14,16 @@ conda activate tidk
 
 tidk build
 
+mkdir ./tmp
+gunzip -c /ibex/project/c2141/sesame/reference_genome_assembly/results/2OW4BC1lvLRFRF_scaffold/giza/assembly/hifiasm/fasta/giza.p_ctg.fa.gz > ./tmp/giza_uncompressed.fa
+
 tidk explore \
-<(gunzip -c /ibex/project/c2141/sesame/reference_genome_assembly/results/2OW4BC1lvLRFRF_scaffold/giza/assembly/hifiasm/fasta/giza.p_ctg.fa.gz) \
---minimum 6 \
+./tmp/giza_uncompressed.fa \
+--minimum 5 \
 --maximum 30 \
 --distance 0.5 \
 --log \
---verbose #\
-#>tidk_explore_2OW4BC1lvLRFRF_giza.tsv
+--verbose \
+>tidk_explore_2OW4BC1lvLRFRF_giza.tsv
+
+rm -rf ./tmp
