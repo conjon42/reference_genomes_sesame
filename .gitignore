@@ -13,4 +13,16 @@
 /code/*/.nextflow.*
 /code/*/.nextflow/
 *.tsv
+*.fa
+*.fasta
+*.fa.gz
+*.fasta.gz
+*.bed
+*.log
+*.err
+*.out
 
+**/logs
+**/null
+
+.vscode/
