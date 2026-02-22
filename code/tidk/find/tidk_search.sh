@@ -13,7 +13,7 @@ source /ibex/user/johnsoc/miniforge/etc/profile.d/conda.sh
 conda activate tidk
 
 
-mkdir ./tmp
+mkdir ./tmp>
 gunzip -c /ibex/project/c2141/sesame/reference_genome_assembly/results/2OW4BC1lvLRFRF_scaffold/giza/assembly/hifiasm/fasta/giza.p_ctg.fa.gz > ./tmp/giza_uncompressed.fa
 
 tidk search \
