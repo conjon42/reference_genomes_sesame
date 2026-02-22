@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --output=./logs/find_%j.out
 #SBATCH --error=./logs/find_%j.err
-#SBATCH --time=1:00:00
+#SBATCH --time=0:10:00
 #SBATCH --partition=batch
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=conner.johnson@kaust.edu.sa
@@ -20,7 +20,7 @@ gunzip -c /ibex/project/c2141/sesame/reference_genome_assembly/results/2OW4BC1lv
 tidk find \
 ./tmp/giza_uncompressed.fa \
 --clade Lamiales \
---output ./tidk_find_telomeres_giza_p_ctg \
+--output tidk_find_telomeres_giza_p_ctg \
 --dir /ibex/project/c2141/sesame/reference_genome_assembly/results/2OW4BC1lvLRFRF_scaffold/giza/telomeres \
 --log \
 

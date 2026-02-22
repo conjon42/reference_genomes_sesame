@@ -23,5 +23,5 @@ compleasm run \
 --odb odb12 \
 -t 32 \
 -L /ibex/user/johnsoc/busco_dbs
-odb
+
 rm -rf ./tmp
