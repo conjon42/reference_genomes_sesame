@@ -1,0 +1,13 @@
+---
+title: "Hifiasm Parameters Evaluation"
+author: "Conner Johnson"
+date: "2026-02-26"
+format: html
+---
+
+# Introduction
+This document is to evaluate choices for hifiasm parameters for sesame genome assembly. The parameters were initially chosen based on review of the hifiasm documentation, hifiasm github issues, and other helpful sources of information.
+
+# Parameters
+#. -k : k-mer size. Default 51, used in intial assembly (nf "Festering Yonath"). Can increase up to 64. #TODO Need to check pros and cons of this for resolving repetitive regions, ensuring correct assembly. 
+#. -D : "Drop k-mers occurring >FLOAT*coverage times" [@chengHifiasmDocumentation]. Default 5, used in intial assembly (nf "Festering Yonath"). 
