@@ -6,8 +6,23 @@ format: html
 ---
 
 # Introduction
+
 This document is to evaluate choices for hifiasm parameters for sesame genome assembly. The parameters were initially chosen based on review of the hifiasm documentation, hifiasm github issues, and other helpful sources of information.
 
 # Parameters
-#. -k : k-mer size. Default 51, used in intial assembly (nf "Festering Yonath"). Can increase up to 64. #TODO Need to check pros and cons of this for resolving repetitive regions, ensuring correct assembly. 
-#. -D : "Drop k-mers occurring >FLOAT*coverage times" [@chengHifiasmDocumentation]. Default 5, used in intial assembly (nf "Festering Yonath"). 
+
+#. -k : k-mer size. Default 51, used in intial assembly (nf "Festering Yonath"). Can increase up to 64. <!--# TODO Need to check pros and cons of this for resolving repetitive regions, ensuring correct assembly -->.
+
+#. -w : Minimizer window size.
+
+Raising -k and -w to max (64) may improve repeat resolution
+
+#. -D : "Drop k-mers occurring \[D\] \* coverage times" [@chengHifiasmDocumentation]. Default 5, used in intial assembly (nf "Festering Yonath"). "The coverage is determined automatically by hifiasm based on k-mer plot, representing homozygous read coverage. Raising this option may improve the resolution of repetitive regions but takes longer time" [@chengHifiasmDocumentation].
+
+#. "-N <INT=100>  Consider up to max(-D*coverage,-N) overlaps for each oriented read. The coverage is determined automatically by hifiasm based on k-mer plot, representing homozygous read coverage. Raising this option may improve the resolution of repetitive regions but takes longer time" [@chengHifiasmDocumentation].
+
+In github issue on fragmented genome in highly repetitive organism, Hifiasm author recommends “increasing -D to 20 or -N to 400” to improve contiguity and resolve repeats. [@OptimisedParametersHighly]
+
+
+
+#. 
