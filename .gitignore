@@ -12,6 +12,7 @@
 /code/*/work
 /code/*/.nextflow.*
 /code/*/.nextflow/
+*.nextflow*
 *.tsv
 *.fa
 *.fasta
