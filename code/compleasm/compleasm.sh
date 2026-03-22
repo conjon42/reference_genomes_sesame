@@ -18,8 +18,32 @@ gunzip -c /ibex/project/c2141/sesame/reference_genome_assembly/results/2OW4BC1lv
 
 compleasm run \
 -a ./tmp/giza_uncompressed.fa \
--o ../../results/2OW4BC1lvLRFRF_scaffold/giza/QC/compleasm \
+-o ../../results/2OW4BC1lvLRFRF_scaffold/giza/QC/compleasm/viridiplantae/ \
 -l viridiplantae \
+--odb odb12 \
+-t 32 \
+-L /ibex/user/johnsoc/busco_dbs
+
+compleasm run \
+-a ./tmp/giza_uncompressed.fa \
+-o ../../results/2OW4BC1lvLRFRF_scaffold/giza/QC/compleasm/lamiales/ \
+-l lamiales \
+--odb odb12 \
+-t 32 \
+-L /ibex/user/johnsoc/busco_dbs
+
+compleasm run \
+-a ./tmp/giza_uncompressed.fa \
+-o ../../results/2OW4BC1lvLRFRF_scaffold/giza/QC/compleasm/eudicotyledons/ \
+-l eudicotyledons \
+--odb odb12 \
+-t 32 \
+-L /ibex/user/johnsoc/busco_dbs
+
+compleasm run \
+-a ./tmp/giza_uncompressed.fa \
+-o ../../results/2OW4BC1lvLRFRF_scaffold/giza/QC/compleasm/embryophyta/ \
+-l embryophyta \
 --odb odb12 \
 -t 32 \
 -L /ibex/user/johnsoc/busco_dbs

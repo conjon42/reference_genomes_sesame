@@ -16,7 +16,7 @@ nextflow run conjon42/genomeassembler \
     -profile kaust \
     -c ./hifiasm.config \
     --input ./samplesheet.csv \
-    --outdir ../../results/asssembly \
+    --outdir ../../results/assembly \
     --use_ref \
     --hifi \
     --assembler hifiasm \
