@@ -1,0 +1,5 @@
+type=align id_job=giza_filtered_self target=giza.filtered_50k.p_ctg.fa.gz query=giza.filtered_50k.p_ctg.fa.gz tool=minimap2 options=repeat:many
+type=align id_job=giza_filtered_ref target=baizhima_genome.fasta query=giza.filtered_50k.p_ctg.fa.gz tool=minimap2 options=repeat:many
+
+type=align id_job=giza_full_self target=giza.p_ctg.fa.gz query=giza.p_ctg.fa.gz tool=minimap2 options=repeat:many
+type=align id_job=giza_full_self target=baizhima_genome.fasta query=giza.p_ctg.fa.gz tool=minimap2 options=repeat:many
