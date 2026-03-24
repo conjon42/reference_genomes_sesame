@@ -30,3 +30,8 @@
 **/.DS_Store
 .Rproj.user
 
+
+# specific files for this project
+/code/nf_genome_assembly/test_nf/
+/code/nf_genome_assembly/test_results/
+
