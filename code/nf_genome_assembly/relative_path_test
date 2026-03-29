@@ -1,0 +1,2 @@
+root="$(git rev-parse --show-toplevel)"
+echo "${project_root}"
